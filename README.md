@@ -1,6 +1,6 @@
-### memorytrimmer
+### memndisktrimmer
 
-A simple program that iterates over cf apps, their processes and stats, finding the apps that use much less memory than they allocate, it then rescale and restarts those apps.  
+A simple program that iterates over cf apps, their processes and stats, finding the apps that use much less memory and disk than they allocate, it then rescales and restarts those apps.  
 
 ## Environment variables:
 
@@ -18,4 +18,4 @@ A simple program that iterates over cf apps, their processes and stats, finding 
 * `EXCLUDED_ORGS` - A comma separated list of orgs to exclude from the process, defaults to `system`.
 * `EXCLUDED_SPACES` - A comma separated list of spaces to exclude from the process, defaults to `""`.
 
-If you want an app to be excluded from the memorytrimmer, simply add the label `NO_MEMORY_TRIM` to the app with the value `true`: ```cf set-label <my-app> NO_MEMORY_TRIM=true```
+If you want an app to be excluded from the memndisktrimmer, simply add the label `NO_MEMNDISK_TRIM` to the app with the value `true`: ```cf set-label <my-app> NO_MEMORY_TRIM=true```

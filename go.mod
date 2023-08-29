@@ -1,4 +1,4 @@
-module github.com/rabobank/memorytrimmer
+module github.com/rabobank/memndisktrimmer
 
 go 1.20
 

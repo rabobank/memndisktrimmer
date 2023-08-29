@@ -205,7 +205,7 @@ func main() {
 								log.Fatalf("failed to list all apps: %s", err)
 							} else {
 								for _, app := range apps {
-									optedOut := app.Metadata.Labels["NO_MEMORY_TRIM"]
+									optedOut := app.Metadata.Labels["NO_MEMNDISK_TRIM"]
 									if app.State == "STARTED" && (optedOut == nil || *optedOut != "true") {
 										usedBuildpack := getBuildPackForApp(app)
 										createdAge := time.Now().Sub(app.CreatedAt).Hours() / 24
