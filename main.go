@@ -273,11 +273,11 @@ func main() {
 															}
 															if isVictim {
 																if dryRun != "true" {
-																	if _, err = cfClient.Applications.Restart(ctx, newProcess.GUID); err != nil {
+																	if _, err = cfClient.Applications.Restart(ctx, app.GUID); err != nil {
 																		fmt.Printf("\nfailed to restart app %s: %s\n", app.Name, err)
 																	} else {
 																		time.Sleep(3 * time.Second) // the docs say that the restart is synchronous, but to me it looks like it is not
-																		fmt.Printf("  ==>  %d MB Mem, ==> %d MB Disk\n", newProcess.MemoryInMB, newProcess.DiskInMB)
+																		fmt.Printf("  ==>  %d MB Mem, ==> %d MB Disk", newProcess.MemoryInMB, newProcess.DiskInMB)
 																	}
 																}
 															}
